@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Учет расходов</string>
+
+    <!--NavigationView menu-->
+    <string name="nav_menu_categories">Категории</string>
+    <string name="nav_menu_waste">Траты</string>
+    <string name="nav_menu_statistic">Статистика</string>
+
+    <!--DrawerToogle-->
+    <string name="open_drawer">Открыто</string>
+    <string name="close_drawer">Закрыто</string>
+</resources>

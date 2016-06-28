@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Money tracker</string>
+
+    <!--NavigationView menu-->
+    <string name="nav_menu_categories">Categories</string>
+    <string name="nav_menu_waste">Waste</string>
+    <string name="nav_menu_statistic">Statistic</string>
+
+    <!--DrawerToogle-->
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+</resources>

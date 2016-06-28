@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_waste"
+            android:checked="false"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="@string/nav_menu_waste"
+            />
+        <item
+            android:id="@+id/action_categories"
+            android:checked="false"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="@string/nav_menu_categories"
+            />
+        <item
+            android:id="@+id/action_statistic"
+            android:checked="false"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/nav_menu_statistic"
+            />
+    </group>
+</menu>
