@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //todo изчезает toolbar при переходе на fragment, решить проблему!
         initToolbar();
         initNavigationView();
         if (savedInstanceState == null) {
