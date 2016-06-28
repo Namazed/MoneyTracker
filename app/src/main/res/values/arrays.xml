@@ -5,4 +5,10 @@
         <item>Categories</item>
         <item>Statistic</item>
     </string-array>
+
+    <string-array name="name_categories">
+        <item>Telephone</item>
+        <item>Jeans</item>
+        <item>T-Shirts</item>
+    </string-array>
 </resources>

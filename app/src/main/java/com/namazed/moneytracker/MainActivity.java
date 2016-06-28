@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         initNavigationView();
         if (savedInstanceState == null) {
             setFragment(new TransactionsFragment());
+            mToolbar.setTitle("Траты");
         }
     }
 
@@ -79,8 +80,19 @@ public class MainActivity extends AppCompatActivity {
                 mDrawerLayout.closeDrawers();
                 switch (menuItem.getItemId()) {
                     case R.id.action_waste:
+                        menuItem.setChecked(true);
                         setFragment(new TransactionsFragment());
-                        setTitle("Траты");
+                        mToolbar.setTitle(getString(R.string.nav_menu_waste));
+                        return true;
+                    case R.id.action_categories:
+                        menuItem.setChecked(true);
+                        setFragment(new CategoriesFragment());
+                        mToolbar.setTitle(getString(R.string.nav_menu_categories));
+                        return true;
+                    case R.id.action_statistic:
+                        menuItem.setChecked(true);
+                        setFragment(new StatisticFragment());
+                        mToolbar.setTitle(getString(R.string.nav_menu_statistic));
                         return true;
                     default:
                         return true;
