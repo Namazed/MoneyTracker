@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         //todo изчезает toolbar при переходе на fragment, решить проблему!
         initToolbar();
         initNavigationView();
+        if (savedInstanceState == null) {
+            setFragment(new TransactionsFragment());
+        }
     }
 
     private void initToolbar() {
@@ -33,10 +36,9 @@ public class MainActivity extends AppCompatActivity {
          */
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle(R.string.app_name);
-        setSupportActionBar(mToolbar);
-//        if (mToolbar != null) {
-//            setSupportActionBar(mToolbar);
-//        }
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+        }
 
         //visible button navigation
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
