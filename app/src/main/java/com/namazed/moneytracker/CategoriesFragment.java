@@ -18,7 +18,7 @@ public class CategoriesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_transactions, container, false);
+        View view = inflater.inflate(R.layout.fragment_categories, container, false);
 
 
         mListView = (ListView) view.findViewById(R.id.listView);

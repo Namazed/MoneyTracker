@@ -1,39 +1,52 @@
 package com.namazed.moneytracker;
 
 
-import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class TransactionAdapter extends ArrayAdapter<Transaction> {
+public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.CardViewHolder> {
     List<Transaction> mTransactions;
 
-    public TransactionAdapter(Context context, List<Transaction> transactions) {
-        super(context, 0, transactions);
+    public TransactionAdapter(List<Transaction> transactions) {
         mTransactions = transactions;
     }
 
+    //TransactionAdapter
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        Transaction transaction = getItem(position);
+    public CardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).
+                inflate(R.layout.list_item, parent, false);
+        return new CardViewHolder(itemView);
+    }
 
-        if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+    @Override
+    public void onBindViewHolder(CardViewHolder holder, int position) {
+        Transaction transaction = mTransactions.get(position);
+        holder.name.setText(transaction.name);
+        holder.sum.setText(transaction.sum);
+        holder.date.setText(transaction.date);
+    }
+
+    @Override
+    public int getItemCount() {
+        return mTransactions.size();
+    }
+
+    public static class CardViewHolder extends RecyclerView.ViewHolder {
+        protected TextView name;
+        protected TextView sum;
+        protected TextView date;
+
+        public CardViewHolder(View itemView) {
+            super(itemView);
+            name = (TextView) itemView.findViewById(R.id.name);
+            sum = (TextView) itemView.findViewById(R.id.sum);
+            date = (TextView) itemView.findViewById(R.id.date);
         }
-
-        TextView tvTitle = (TextView) convertView.findViewById(R.id.title);
-        TextView tvSum = (TextView) convertView.findViewById(R.id.sum);
-        TextView tvDate = (TextView) convertView.findViewById(R.id.date);
-
-        tvTitle.setText(transaction.title);
-        tvSum.setText(transaction.sum);
-        tvDate.setText(transaction.date);//todo может быть неверно.
-
-        return convertView;
     }
 }

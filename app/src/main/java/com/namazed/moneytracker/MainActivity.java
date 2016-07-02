@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         initNavigationView();
         if (savedInstanceState == null) {
             setFragment(new TransactionsFragment());
-            mToolbar.setTitle("Траты");
+            mToolbar.setTitle(getString(R.string.nav_menu_waste));
         }
     }
 

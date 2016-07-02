@@ -4,10 +4,11 @@ package com.namazed.moneytracker;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,7 +16,7 @@ import java.util.List;
 
 public class TransactionsFragment extends Fragment {
 
-    private ListView mListView;
+    private RecyclerView mRecyclerView;
     private TransactionAdapter mTransactionAdapter;
     List<Transaction> data = new ArrayList<>();
 
@@ -25,10 +26,18 @@ public class TransactionsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_transactions, container, false);
 
         List<Transaction> adapterData = getDataList();
-        mTransactionAdapter = new TransactionAdapter(getActivity(), adapterData);
+        mTransactionAdapter = new TransactionAdapter(adapterData);
 
-        mListView = (ListView) view.findViewById(R.id.listView);
-        mListView.setAdapter(mTransactionAdapter);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.transactions_list);
+        //FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        //mRecyclerView.setHasFixedSize(true); //Только для телефонов, фиксированный размер.
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        //Сохраняем в менеджере вертикальную ориентацию
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        //присвоили view ориентацию, с помощью manager
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setAdapter(mTransactionAdapter);
+        //fab.attachToRecyclerView(mRecyclerView);
         return view;
 //        return super.onCreateView(inflater, container, savedInstanceState);
     }

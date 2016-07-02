@@ -2,7 +2,11 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="tvMarginListItem">10dp</dimen>
-    <dimen name="tvSizeListItem">16sp</dimen>
-    <dimen name="dividerHeight">0.4dp</dimen>
+    <dimen name="tv_margin_list_item">10dp</dimen>
+    <dimen name="tv_size_list_item">16sp</dimen>
+    <dimen name="divider_height">0.4dp</dimen>
+    <dimen name="cardview_height">60dp</dimen>
+    <dimen name="cardview_margin">5dp</dimen>
+    <dimen name="cardview_marginBottom">7dp</dimen>
+    <dimen name="cardview_corner_radius">3dp</dimen>
 </resources>

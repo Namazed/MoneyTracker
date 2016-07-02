@@ -2,12 +2,12 @@ package com.namazed.moneytracker;
 
 
 public class Transaction {
-    public String title;
+    public String name;
     public String sum;
     public String date;
 
-    public Transaction(String title, int sum, String date) {
-        this.title = title;
+    public Transaction(String name, int sum, String date) {
+        this.name = name;
         this.sum = Integer.toString(sum);
         this.date = date;
     }
