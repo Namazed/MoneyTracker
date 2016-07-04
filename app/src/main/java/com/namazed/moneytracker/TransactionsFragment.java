@@ -31,7 +31,6 @@ public class TransactionsFragment extends Fragment {
         mTransactionAdapter = new TransactionAdapter(adapterData);
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.transactions_list);
-        //FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         mRecyclerView.setHasFixedSize(true); //Только для телефонов, фиксированный размер.
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
@@ -42,7 +41,6 @@ public class TransactionsFragment extends Fragment {
         mRecyclerView.setAdapter(mTransactionAdapter);
         fab.attachToRecyclerView(mRecyclerView);
         return view;
-//        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     private List<Transaction> getDataList() {
