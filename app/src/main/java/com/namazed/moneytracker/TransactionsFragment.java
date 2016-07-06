@@ -2,6 +2,7 @@ package com.namazed.moneytracker;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -32,14 +33,25 @@ public class TransactionsFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.transactions_list);
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+
         mRecyclerView.setHasFixedSize(true); //Только для телефонов, фиксированный размер.
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         //Сохраняем в менеджере вертикальную ориентацию
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         //присвоили view ориентацию, с помощью manager
         mRecyclerView.setLayoutManager(linearLayoutManager);
+
         mRecyclerView.setAdapter(mTransactionAdapter);
         fab.attachToRecyclerView(mRecyclerView);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddTransactionActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+
         return view;
     }
 
