@@ -32,8 +32,6 @@ public class AddTransactionActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-//                 такой возврат только при большом количестве Activity в приложении, возврат домой
-//                NavUtils.navigateUpFromSameTask(this);
                 onBackPressed();
                 return true;
             default:

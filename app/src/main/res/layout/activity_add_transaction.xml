@@ -20,30 +20,30 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center_vertical"
-            android:text="Сумма"
-            android:textSize="20sp"/>
+            android:text="@string/sum_add_transaction"
+            android:textSize="@dimen/tv_size_add_transaction_column0"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:hint="300"
-            android:textSize="15sp"/>
+            android:textSize="@dimen/edit_text_size_add_transaction"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center_vertical"
-            android:text="Примечания"
-            android:textSize="20sp"/>
+            android:text="@string/comments_add_transaction"
+            android:textSize="@dimen/tv_size_add_transaction_column0"/>
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill|center_vertical"
             android:hint="Война и мир"
-            android:textSize="15sp"
+            android:textSize="@dimen/edit_text_size_add_transaction"
             />
 
         <TextView
@@ -51,15 +51,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center_vertical"
-            android:text="Категория"
-            android:textSize="20sp"/>
+            android:text="@string/category_add_transaction"
+            android:textSize="@dimen/tv_size_add_transaction_column0"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:text="Книги"
-            android:textSize="18sp"
+            android:textSize="@dimen/tv_size_add_transaction_column1"
             android:textColor="@color/primary"/>
 
         <TextView
@@ -67,15 +67,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center_vertical"
-            android:text="Дата"
-            android:textSize="20sp"/>
+            android:text="@string/date_add_transaction"
+            android:textSize="@dimen/tv_size_add_transaction_column0"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:text="Сегодня"
-            android:textSize="18sp"
+            android:textSize="@dimen/tv_size_add_transaction_column1"
             android:textColor="@color/primary"/>
 
     </GridLayout>
