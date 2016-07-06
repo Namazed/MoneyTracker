@@ -9,7 +9,9 @@
         android:layout_height="@dimen/cardview_height"
         android:layout_margin="@dimen/cardview_margin"
         android:layout_marginBottom="@dimen/cardview_marginBottom"
-        cardview:cardBackgroundColor="@color/list_background"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        cardview:cardBackgroundColor="@color/background"
         cardview:cardCornerRadius="@dimen/cardview_corner_radius">
 
         <RelativeLayout

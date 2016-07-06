@@ -9,4 +9,5 @@
     <!--DrawerToogle-->
     <string name="open_drawer">Открыто</string>
     <string name="close_drawer">Закрыто</string>
+    <string name="add_transaction">Добавить трату</string>
 </resources>
