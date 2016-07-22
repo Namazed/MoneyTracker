@@ -2,7 +2,6 @@ package com.namazed.moneytracker;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,30 +10,36 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+
+@EActivity(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar mToolbar;
-    private DrawerLayout mDrawerLayout;
+    @ViewById(R.id.toolbar)
+    Toolbar mToolbar;
+
+    @ViewById(R.id.drawerLayout)
+    DrawerLayout mDrawerLayout;
+
     ActionBarDrawerToggle drawerToggle;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    @AfterViews
+    void readyApp() {
 
         initToolbar();
         initNavigationView();
-        if (savedInstanceState == null) {
-            setFragment(new TransactionsFragment());
-            mToolbar.setTitle(getString(R.string.nav_menu_waste));
-        }
+//        if (savedInstanceState == null) {
+//            setFragment(new TransactionsFragment());
+//            mToolbar.setTitle(getString(R.string.nav_menu_waste));
+//        }
     }
-
     private void initToolbar() {
         /*
         * Инициализация Toolbar.
          */
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        //mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle(R.string.app_name);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
@@ -49,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         /*
         * Инициализация NavigationView. Обработка нажатий на MenuItem NavigationView.
          */
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        //mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         drawerToggle = new ActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
@@ -81,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.action_waste:
                         menuItem.setChecked(true);
-                        setFragment(new TransactionsFragment());
+                        setFragment(TransactionsFragment_.builder().build());
                         mToolbar.setTitle(getString(R.string.nav_menu_waste));
                         return true;
                     case R.id.action_categories:

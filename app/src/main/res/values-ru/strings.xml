@@ -10,8 +10,10 @@
     <string name="open_drawer">Открыто</string>
     <string name="close_drawer">Закрыто</string>
     <string name="add_transaction">Добавить трату</string>
-    <string name="sum_add_transaction">Сумма</string>
-    <string name="comments_add_transaction">Примечания</string>
-    <string name="category_add_transaction">Категория</string>
-    <string name="date_add_transaction">Дата</string>
+    <string name="sum">Сумма</string>
+    <string name="title">Название</string>
+    <string name="category">Категория</string>
+    <string name="date">Дата</string>
+    <string name="choose_category">Выберите категорию</string>
+    <string name="add">Добавить</string>
 </resources>

@@ -1,14 +1,30 @@
 package com.namazed.moneytracker;
 
 
-public class Transaction {
-    public String name;
-    public String sum;
-    public String date;
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
 
-    public Transaction(String name, int sum, String date) {
-        this.name = name;
-        this.sum = Integer.toString(sum);
-        this.date = date;
+import java.util.Date;
+
+@Table(name = "Transactions")
+public class Transaction extends Model {
+    @Column(name = "Title")
+    public String title;
+    @Column(name = "Sum")
+    public String sum;
+    @Column(name = "Date")
+    public Date date;
+
+    /**
+     * This is required by active android
+     */
+    public Transaction() {
+    }
+
+    public Transaction(String title, String sum) {
+        this.title = title;
+        this.sum = sum;
+        date = new Date();
     }
 }
