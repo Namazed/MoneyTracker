@@ -10,8 +10,10 @@
     <string name="open_drawer">Open</string>
     <string name="close_drawer">Close</string>
     <string name="add_transaction">Add transaction</string>
-    <string name="sum_add_transaction">Sum</string>
-    <string name="comments_add_transaction">Comments</string>
-    <string name="category_add_transaction">Category</string>
-    <string name="date_add_transaction">Date</string>
+    <string name="sum">Sum</string>
+    <string name="title">Title</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+    <string name="choose_category">Choose category</string>
+    <string name="add">Add</string>
 </resources>

@@ -20,46 +20,47 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center_vertical"
-            android:text="@string/sum_add_transaction"
-            android:textSize="@dimen/tv_size_add_transaction_column0"/>
+            android:text="@string/sum"
+            android:textSize="@dimen/big_text_size"/>
 
         <EditText
+            android:id="@+id/sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill"
+            android:gravity="fill"
             android:hint="300"
-            android:textSize="@dimen/edit_text_size_add_transaction"/>
+            android:textSize="@dimen/big_text_size"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center_vertical"
-            android:text="@string/comments_add_transaction"
-            android:textSize="@dimen/tv_size_add_transaction_column0"/>
+            android:gravity="center"
+            android:text="@string/title"
+            android:textSize="@dimen/big_text_size"/>
 
         <EditText
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill|center_vertical"
+            android:gravity="fill"
             android:hint="Война и мир"
-            android:textSize="@dimen/edit_text_size_add_transaction"
+            android:textSize="@dimen/big_text_size"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center_vertical"
-            android:text="@string/category_add_transaction"
-            android:textSize="@dimen/tv_size_add_transaction_column0"/>
+            android:gravity="center"
+            android:text="@string/category"
+            android:textSize="@dimen/big_text_size"/>
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:text="Книги"
-            android:textSize="@dimen/tv_size_add_transaction_column1"
+            android:gravity="fill"
+            android:hint="@string/choose_category"
+            android:textSize="@dimen/medium_text_size"
+            android:textColorHint="@color/primary"
             android:textColor="@color/primary"/>
 
         <TextView
@@ -67,16 +68,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center_vertical"
-            android:text="@string/date_add_transaction"
-            android:textSize="@dimen/tv_size_add_transaction_column0"/>
+            android:text="@string/date"
+            android:textSize="@dimen/big_text_size"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
-            android:text="Сегодня"
-            android:textSize="@dimen/tv_size_add_transaction_column1"
-            android:textColor="@color/primary"/>
+            android:hint="Сегодня"
+            android:textSize="@dimen/medium_text_size"
+            android:textColorHint="@color/primary"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_transaction"
+            android:text="@string/add"/>
 
     </GridLayout>
 

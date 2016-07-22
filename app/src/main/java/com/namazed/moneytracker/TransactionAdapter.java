@@ -27,9 +27,9 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
     @Override
     public void onBindViewHolder(CardViewHolder holder, int position) {
         Transaction transaction = mTransactions.get(position);
-        holder.name.setText(transaction.name);
+        holder.title.setText(transaction.title);
         holder.sum.setText(transaction.sum);
-        holder.date.setText(transaction.date);
+        holder.date.setText(transaction.date.toString());
     }
 
     @Override
@@ -38,13 +38,13 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
     }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder {
-        protected TextView name;
+        protected TextView title;
         protected TextView sum;
         protected TextView date;
 
         public CardViewHolder(View itemView) {
             super(itemView);
-            name = (TextView) itemView.findViewById(R.id.name);
+            title = (TextView) itemView.findViewById(R.id.name);
             sum = (TextView) itemView.findViewById(R.id.sum);
             date = (TextView) itemView.findViewById(R.id.date);
         }
